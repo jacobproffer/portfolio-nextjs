@@ -1,20 +1,17 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 import screen from 'superior-mq';
+import { bp } from '../styles/helpers';
 
 export const H1 = styled.h1`
   font-size: ${rem(100)};
 
-  ${screen.below('1281px', `
+  ${screen.below(bp.laptopSm, `
     font-size: ${rem(75)};
   `)}
 
-  ${screen.below('1024px', `
+  ${screen.below(bp.tablet, `
     font-size: ${rem(50)};
-  `)}
-
-  ${screen.below('480px', `
-    font-size: ${rem(25)};
   `)}
 `;
 

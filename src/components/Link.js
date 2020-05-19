@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
-// import screen from 'superior-mq';
+import screen from 'superior-mq';
 import { rem } from 'polished';
+import { bp } from '../styles/helpers';
 import InlineLink from './InlineLink';
 
 const Link = styled(InlineLink)`
@@ -17,7 +18,7 @@ const Link = styled(InlineLink)`
     height: 2px;
     background-color: ${props => props.theme.gray};
     transition: background-color .5s ease-in-out;
-    content: '';
+    content: "";
   }
 
   &:hover {
@@ -25,6 +26,10 @@ const Link = styled(InlineLink)`
       background-color: ${props => props.theme.green};
     }
   }
+
+  ${screen.below(bp.tablet, `
+    font-size: ${rem(16)};
+  `)}
 
   ${props => props.styles && css`
     ${props.styles}

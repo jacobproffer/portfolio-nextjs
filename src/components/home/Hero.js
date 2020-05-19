@@ -20,7 +20,7 @@ const HeroBlock = styled.div`
   `)}
 
   ${screen.below(bp.mobile, `
-    padding: 25px 0 65px;
+    padding: 50px 0 40px;
   `)}
 `;
 
@@ -37,17 +37,18 @@ const Image = styled(Grid.Item)`
     width: 100%;
     height: 100%;
     background-color: ${props => props.theme.gray};
-    content: '';
+    content: "";
   }
 
-  ${screen.below(bp.mobile, `
-    grid-column: 3 / span 6;
+  ${screen.below(bp.tablet, `
+    grid-column: 1 / -1;
+    max-width: 476px;
+    margin: auto;
   `)}
 `;
 
 const Figure = styled.div`
   position: relative;
-  width: 100%;
 
   img {
     display: block;
@@ -69,11 +70,11 @@ const Heading = styled(H1)`
   `)}
 
   ${screen.below(bp.tablet, `
-    right: -38px;
-  `)}
-
-  ${screen.below(bp.mobileSm, `
-    right: -19px;
+    top: -50px;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    writing-mode: horizontal-tb;
   `)}
 `;
 

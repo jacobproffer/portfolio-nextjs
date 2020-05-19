@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import screen from 'superior-mq';
+import { bp } from '../styles/helpers';
 import Container from './Container';
 import Grid from './Grid';
 import List from './List';
@@ -8,7 +9,7 @@ import Link from './Link';
 
 const gridItemStyles = `
   grid-column: span 2 / -1;
-  text-align: right;
+  justify-self: end;
 `;
 
 const SiteHeader = styled.header`
@@ -17,16 +18,13 @@ const SiteHeader = styled.header`
   width: 100%;
   padding: 100px 0;
 
-  ${screen.below('1281px', `
+  ${screen.below(bp.laptopSm, `
     padding: 75px 0;
   `)}
 
-  ${screen.below('1024px', `
+  ${screen.below(bp.tablet, `
+    position: relative;
     padding: 50px 0;
-  `)}
-
-  ${screen.below('768px', `
-    padding: 25px 0;
   `)}
 `;
 
@@ -43,7 +41,6 @@ const SkipLink = styled.a`
 `;
 
 const LogoWrap = styled.div`
-  position: fixed;
   width: 40px;
   height: 40px;
 
@@ -52,19 +49,13 @@ const LogoWrap = styled.div`
     height: 100%;
   }
 
+  ${screen.above(bp.tablet, `
+    position: fixed;
+  `)}
+
   ${screen.below('768px', `
     width: 30px;
     height: 30px;
-  `)}
-`;
-
-const ContactLink = styled(Link)`
-  ${screen.below('768px', `
-    position: absolute;
-    top: 0;
-    right: 20px;
-    writing-mode: vertical-lr;
-    white-space: nowrap;
   `)}
 `;
 
@@ -87,7 +78,7 @@ const Header = () => (
         <Grid.Item styles={gridItemStyles}>
           <nav arial-label="primary">
             <List>
-              <ContactLink href="mailto:hello@jacobproffer.com">Contact</ContactLink>
+              <Link href="mailto:hello@jacobproffer.com">Contact</Link>
             </List>
           </nav>
         </Grid.Item>
