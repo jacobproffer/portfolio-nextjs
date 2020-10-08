@@ -26,7 +26,6 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -34,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     color: ${props => props.theme.white};
     background: ${props => props.theme.black};
-    font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic', 'ＭＳ ゴシック' , 'MS Gothic', sans-serif;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", sans-serif;
     font-size: 16px;
     font-weight: 100;
     line-height: 1.5;
@@ -58,12 +57,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  h1,
-  h2 {
+  h1 {
     margin: 0;
   }
 
   h2 {
+    margin-top: 0;
     line-height: 1;
   }
 `;

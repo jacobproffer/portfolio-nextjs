@@ -6,7 +6,6 @@ import { bp } from '../../styles/helpers';
 import Container from '../Container';
 import Grid from '../Grid';
 import { H1 } from '../H';
-import VisuallyHidden from '../VisuallyHidden';
 
 const HeroBlock = styled.div`
   padding: 100px 0 182px;
@@ -91,12 +90,9 @@ const Hero = ({ image, imageAlt, heading }) => (
           }
 
           {heading &&
-            <header>
-              <Heading lang="ja" as="span" aria-hidden="true">
-                {heading}
-              </Heading>
-              <VisuallyHidden as="h1">Web Developer</VisuallyHidden>
-            </header>
+            <Heading lang="ja" as="span" aria-hidden="true">
+              {heading}
+            </Heading>
           }
 
         </Image>

@@ -10,7 +10,6 @@ import Grid from '../Grid';
 import SiteGrid from '../SiteGrid';
 import InlineLink from '../InlineLink';
 import UnstyledList from '../UnstyledList';
-import VisuallyHidden from '../VisuallyHidden';
 
 const siteList = [
   {
@@ -67,12 +66,11 @@ const Site = styled(InlineLink)`
   position: relative;
   display: block;
   background-color: #001514;
-  border: 2px solid rgba(255, 255, 255, 0.065);
+  border: 2px solid rgba(255, 255, 255, .065);
 
   span,
   small {
     display: block;
-    text-transform: uppercase;
   }
 
   p {
@@ -88,7 +86,7 @@ const Site = styled(InlineLink)`
     height: 100%;
     background-color: ${props => props.theme.gray};
     transition: bottom 300ms ease-in-out;
-    content: '';
+    content: "";
   }
 
   ${props => hover(`
@@ -106,8 +104,8 @@ const Site = styled(InlineLink)`
 const SiteTitle = styled.span`
   padding: 20px;
   font-weight: 400;
-  letter-spacing: 0.1rem;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.065);
+  letter-spacing: .1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, .065);
 `;
 
 const SiteInfo = styled.div`
@@ -122,45 +120,43 @@ const SiteTag = styled.small`
 `;
 
 const Sites = ({ heading }) => (
-  <Section>
-    <Container>
-      <SiteGrid>
+  <Section as="aside">
+    <SiteGrid as={Container}>
 
-        {heading &&
-          <SiteGrid.LeftCol>
-            <VisuallyHidden as="header">
-              <h2 id="sites">{heading}</h2>
-            </VisuallyHidden>
-          </SiteGrid.LeftCol>
-        }
+      {heading &&
+        <SiteGrid.LeftCol>
+          <header>
+            <h2 id="sites">{heading}</h2>
+          </header>
+        </SiteGrid.LeftCol>
+      }
 
-        {siteList &&
-          <SiteGrid.RightCol>
-            <SitesGrid as={UnstyledList}>
+      {siteList &&
+        <SiteGrid.RightCol>
+          <SitesGrid as={UnstyledList}>
 
-              {siteList.map(item => (
-                <UnstyledList.Item key={item.id} span={2} aria-labelledby="sites">
-                  <Site href={item.link}>
-                    <SiteTitle>{item.title}</SiteTitle>
-                    <SiteInfo>
-                      <SiteTag>{item.tag}</SiteTag>
+            {siteList.map(item => (
+              <UnstyledList.Item key={item.id} span={2} aria-labelledby="sites">
+                <Site href={item.link}>
+                  <SiteTitle>{item.title}</SiteTitle>
+                  <SiteInfo>
+                    <SiteTag>{item.tag}</SiteTag>
 
-                      {item.description &&
-                        <p>{item.description}</p>
-                      }
+                    {item.description &&
+                      <p>{item.description}</p>
+                    }
 
-                    </SiteInfo>
+                  </SiteInfo>
 
-                  </Site>
-                </UnstyledList.Item>
-              ))}
+                </Site>
+              </UnstyledList.Item>
+            ))}
 
-            </SitesGrid>
-          </SiteGrid.RightCol>
-        }
+          </SitesGrid>
+        </SiteGrid.RightCol>
+      }
 
-      </SiteGrid>
-    </Container>
+    </SiteGrid>
   </Section>
 );
 

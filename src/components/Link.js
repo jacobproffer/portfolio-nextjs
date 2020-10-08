@@ -7,7 +7,6 @@ import InlineLink from './InlineLink';
 const Link = styled(InlineLink)`
   position: relative;
   font-size: ${rem(18)};
-  text-transform: uppercase;
   letter-spacing: .2rem;
 
   &::before {
