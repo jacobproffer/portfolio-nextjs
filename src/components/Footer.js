@@ -5,7 +5,6 @@ import Container from './Container';
 import SiteGrid from './SiteGrid';
 import List from './List';
 import Link from './Link';
-import VisuallyHidden from './VisuallyHidden';
 
 const footerList = [
   {
@@ -57,23 +56,17 @@ const Footer = () => (
   <StyledFooter>
     <Container>
       <SiteGrid>
-        <SiteGrid.LeftCol>
-          <VisuallyHidden as="header">
-            <h3 id="social">Social Links</h3>
-          </VisuallyHidden>
-        </SiteGrid.LeftCol>
-        <SiteGrid.RightCol>
-          <nav aria-labelledby="social">
-            <List>
-              {footerList.map(item => (
-                <ListItem key={item.id}>
-                  <Link href={item.link}>
-                    {item.title}
-                  </Link>
-                </ListItem>
-              ))}
-            </List>
-          </nav>
+        <SiteGrid.LeftCol />
+        <SiteGrid.RightCol as="nav" aria-label="social">
+          <List>
+            {footerList.map(item => (
+              <ListItem key={item.id}>
+                <Link href={item.link}>
+                  {item.title}
+                </Link>
+              </ListItem>
+            ))}
+          </List>
         </SiteGrid.RightCol>
       </SiteGrid>
     </Container>

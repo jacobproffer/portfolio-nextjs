@@ -11,10 +11,10 @@ const Index = () => (
     <Wrap>
       <Header />
       <main id="main-content">
-        <Hero heading="ウェブ開発者" image="/images/hero.jpg" imageAlt="Jacob Proffer." />
-        <Intro heading="伝記" />
-        <Sites heading="作品" />
+        <Hero heading="プログラマー" image="/images/hero.jpg" imageAlt="Jacob Proffer." />
+        <Intro heading="Intro" />
       </main>
+      <Sites heading="Projects" />
       <Footer />
     </Wrap>
   </Fragment>

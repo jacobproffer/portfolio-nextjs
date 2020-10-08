@@ -8,13 +8,8 @@ import Section from '../Section';
 import Container from '../Container';
 import SiteGrid from '../SiteGrid';
 import InlineLink from '../InlineLink';
-import VisuallyHidden from '../VisuallyHidden';
 
 const IntroSection = styled(Section)`
-  h2 {
-    text-transform: uppercase;
-  }
-
   p {
     font-size: ${rem(18)};
     line-height: 32px;
@@ -31,32 +26,32 @@ const IntroSection = styled(Section)`
       font-size: ${rem(16)};
     `)}
   }
+
+  a {
+    text-decoration: underline;
+  }
 `;
 
 const Intro = ({ heading }) => (
-  <IntroSection>
-    <Container>
-      <SiteGrid>
+  <IntroSection as="article">
+    <SiteGrid as={Container}>
 
-        {heading &&
-          <SiteGrid.LeftCol>
-            <VisuallyHidden as="header">
-              <h2>{heading}</h2>
-            </VisuallyHidden>
-          </SiteGrid.LeftCol>
-        }
+      {heading &&
+        <SiteGrid.LeftCol as="header">
+          <h2>{heading}</h2>
+        </SiteGrid.LeftCol>
+      }
 
-        <SiteGrid.RightCol>
-          <p>Hey there, I am Jacob. I am a
-          front-end developer at <InlineLink href="https://elegantseagulls.com/">Elegant Seagulls</InlineLink> in
-          Marquette, Michigan. I build websites that are accessible and usable.
-          For the past four years, I have focused on custom WordPress themes with Advanced
-          Custom Fields. Recently, I have grown a love for React and Hugo.</p>
-          <p>When I am not coding, I study Japanese and trail run.</p>
-        </SiteGrid.RightCol>
+      <SiteGrid.RightCol>
+        <p>Hey there, I am Jacob. I am a
+        front-end developer at <InlineLink href="https://elegantseagulls.com/">Elegant Seagulls</InlineLink> in
+        Marquette, Michigan. I build websites that are accessible and usable.
+        For the past four years, I have focused on custom WordPress themes with Advanced
+        Custom Fields. Recently, I have grown a love for React and Hugo.</p>
+        <p>When I am not coding, I study Japanese and trail run.</p>
+      </SiteGrid.RightCol>
 
-      </SiteGrid>
-    </Container>
+    </SiteGrid>
   </IntroSection>
 );
 
