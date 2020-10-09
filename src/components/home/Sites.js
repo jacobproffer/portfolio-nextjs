@@ -35,13 +35,6 @@ const siteList = [
   },
   {
     id: 4,
-    title: 'AAN News',
-    link: 'https://aan-news.proffer.dev/',
-    description: 'Fictional news website for Bohemia Interactive\'s Arma 3.',
-    tag: 'Hugo',
-  },
-  {
-    id: 5,
     title: 'Personal Blog',
     link: 'https://jacobproffer.com/',
     description: 'Personal blog where I write about my travels and language studies.',
@@ -125,9 +118,7 @@ const Sites = ({ heading }) => (
 
       {heading &&
         <SiteGrid.LeftCol>
-          <header>
-            <h2 id="sites">{heading}</h2>
-          </header>
+          <h2>{heading}</h2>
         </SiteGrid.LeftCol>
       }
 
@@ -136,7 +127,7 @@ const Sites = ({ heading }) => (
           <SitesGrid as={UnstyledList}>
 
             {siteList.map(item => (
-              <UnstyledList.Item key={item.id} span={2} aria-labelledby="sites">
+              <UnstyledList.Item key={item.id} span={2}>
                 <Site href={item.link}>
                   <SiteTitle>{item.title}</SiteTitle>
                   <SiteInfo>

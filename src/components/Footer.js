@@ -54,22 +54,20 @@ const ListItem = styled.li`
 
 const Footer = () => (
   <StyledFooter>
-    <Container>
-      <SiteGrid>
-        <SiteGrid.LeftCol />
-        <SiteGrid.RightCol as="nav" aria-label="social">
-          <List>
-            {footerList.map(item => (
-              <ListItem key={item.id}>
-                <Link href={item.link}>
-                  {item.title}
-                </Link>
-              </ListItem>
-            ))}
-          </List>
-        </SiteGrid.RightCol>
-      </SiteGrid>
-    </Container>
+    <SiteGrid as={Container}>
+      <SiteGrid.LeftCol />
+      <SiteGrid.RightCol as="nav" aria-label="social">
+        <List>
+          {footerList.map(item => (
+            <ListItem key={item.id}>
+              <Link href={item.link}>
+                {item.title}
+              </Link>
+            </ListItem>
+          ))}
+        </List>
+      </SiteGrid.RightCol>
+    </SiteGrid>
   </StyledFooter>
 );
 

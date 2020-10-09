@@ -11,7 +11,11 @@ const Index = () => (
     <Wrap>
       <Header />
       <main id="main-content">
-        <Hero heading="プログラマー" image="/images/hero.jpg" imageAlt="Jacob Proffer." />
+        <Hero
+          heading="プログラマー"
+          image="/images/hero.jpg"
+          imageAlt=""
+        />
         <Intro heading="Intro" />
       </main>
       <Sites heading="Projects" />
