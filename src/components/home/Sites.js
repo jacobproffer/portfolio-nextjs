@@ -120,7 +120,7 @@ const SiteTag = styled.small`
 `;
 
 const Sites = ({ heading }) => (
-  <Section as="aside">
+  <Section>
     <SiteGrid as={Container}>
 
       {heading &&

@@ -61,15 +61,13 @@ const Header = () => (
   <SiteHeader as="header">
     <SkipLink href="#main-content">Skip to Main Content</SkipLink>
     <Grid>
-      <LogoWrap as="h1">
+      <LogoWrap aria-hidden="true">
         <svg
           viewBox="0 0 800 800"
           width="800"
           height="800"
           xmlns="http://www.w3.org/2000/svg"
-          aria-labelledby="logo-title"
         >
-          <title id="logo-title">Jacob Proffer</title>
           <g fill="#fff" fillRule="evenodd">
             <path d="M725 125H125v675H50V125H0V50h50V0h75v50h675v371h-75V125z" />
             <path d="M675 250v550H175v-75h425V250H175v-75h500v75z" />
