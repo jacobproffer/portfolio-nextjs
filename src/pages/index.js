@@ -6,21 +6,26 @@ import Intro from '../components/home/Intro';
 import Education from '../components/home/Education';
 import Sites from '../components/home/Sites';
 import Footer from '../components/Footer';
+import VisuallyHidden from '../components/VisuallyHidden';
 
 const Index = () => (
   <Fragment>
     <Wrap>
       <Header />
       <main id="main-content">
-        <Hero
-          heading="プログラマー"
-          image="/images/jacob-proffer.jpg"
-          imageAlt=""
-        />
-        <Intro heading="Introduction" />
-        <Education heading="Education" />
+        <article>
+          <VisuallyHidden as="h1">Portfolio of Jacob Proffer</VisuallyHidden>
+          <Hero
+            heading="プログラマー"
+            image="/images/jacob-proffer.jpg"
+            imageAlt=""
+            aria-hidden="true"
+          />
+          <Intro heading="Introduction" />
+          <Education heading="Education" />
+          <Sites heading="Projects" />
+        </article>
       </main>
-      <Sites heading="Projects" />
       <Footer />
     </Wrap>
   </Fragment>

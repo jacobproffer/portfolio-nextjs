@@ -33,11 +33,11 @@ const IntroSection = styled(Section)`
 `;
 
 const Intro = ({ heading }) => (
-  <IntroSection as="article">
+  <IntroSection>
     <SiteGrid as={Container}>
 
       {heading &&
-        <SiteGrid.LeftCol as="header">
+        <SiteGrid.LeftCol>
           <h2>{heading}</h2>
         </SiteGrid.LeftCol>
       }
