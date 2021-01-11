@@ -3,6 +3,7 @@ import Wrap from '../components/Wrap';
 import Header from '../components/Header';
 import Hero from '../components/home/Hero';
 import Intro from '../components/home/Intro';
+import Education from '../components/home/Education';
 import Sites from '../components/home/Sites';
 import Footer from '../components/Footer';
 
@@ -13,10 +14,11 @@ const Index = () => (
       <main id="main-content">
         <Hero
           heading="プログラマー"
-          image="/images/hero.jpg"
+          image="/images/jacob-proffer.jpg"
           imageAlt=""
         />
-        <Intro heading="Intro" />
+        <Intro heading="Introduction" />
+        <Education heading="Education" />
       </main>
       <Sites heading="Projects" />
       <Footer />

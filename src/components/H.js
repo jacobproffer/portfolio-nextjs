@@ -16,19 +16,12 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-size: ${rem(48)};
-
-  ${screen.below('1024px', `
-    font-size: ${rem(36)};
-  `)}
-
-  ${screen.below('768px', `
-    font-size: ${rem(24)};
-  `)}
+  font-size: ${rem(24)};
 `;
 
 export const H3 = styled.h3`
-  font-size: ${rem(48)};
+  font-size: ${rem(18)};
+  font-weight: 400;
 `;
 
 export const H4 = styled.h4`

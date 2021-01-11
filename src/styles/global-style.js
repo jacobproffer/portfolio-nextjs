@@ -57,13 +57,30 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  h1 {
+  h1,
+  h3 {
     margin: 0;
   }
 
   h2 {
     margin-top: 0;
     line-height: 1;
+  }
+
+  dl,
+  dd {
+    padding: 0;
+    margin: 0;
+  }
+
+  dd {
+    &:first-of-type {
+      font-weight: 400;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
   }
 `;
 

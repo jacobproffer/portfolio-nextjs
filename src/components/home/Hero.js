@@ -51,7 +51,7 @@ const Figure = styled.div`
 
   img {
     display: block;
-    mix-blend-mode: soft-light;
+    mix-blend-mode: multiply;
   }
 `;
 
