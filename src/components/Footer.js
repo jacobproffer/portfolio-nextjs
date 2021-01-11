@@ -9,7 +9,7 @@ import Link from './Link';
 const footerList = [
   {
     id: 1,
-    title: 'Github',
+    title: 'GitHub',
     link: 'https://github.com/jacobproffer',
   },
   {
