@@ -24,7 +24,9 @@ const Education = ({ heading }) => (
           <dd>Bachelor of Fine Arts, Computer Art</dd>
           <VisuallyHidden as="dt">Years of Study</VisuallyHidden>
           <VisuallyHidden as="dt">Honors</VisuallyHidden>
-          <dd>Magna Cum Laude</dd>
+          <dd>
+            <i>magna cum laude</i>
+          </dd>
           <dd>
             <time>2010 - 2014</time>
           </dd>
