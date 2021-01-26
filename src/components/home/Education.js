@@ -25,7 +25,7 @@ const Education = ({ heading }) => (
           <VisuallyHidden as="dt">Years of Study</VisuallyHidden>
           <VisuallyHidden as="dt">Honors</VisuallyHidden>
           <dd>
-            <i>magna cum laude</i>
+            <em>magna cum laude</em>
           </dd>
           <dd>
             <time>2010 - 2014</time>
