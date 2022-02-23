@@ -49,7 +49,7 @@ const Intro = ({ heading }) => (
           Elegant Seagulls</InlineLink> in Marquette, Michigan. I am an advocate
           for accessibility and
           strive to develop inclusive web experiences.</p>
-        <p>In my free time, I trail run and study Japanese.</p>
+        <p>I trail run and study Japanese.</p>
       </SiteGrid.RightCol>
 
     </SiteGrid>
