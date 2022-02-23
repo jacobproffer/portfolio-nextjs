@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-column-gap: 20px;
+  column-gap: 20px;
 
   ${props => props.styles && css`
     ${props.styles}
@@ -11,7 +11,7 @@ const Grid = styled.div`
 `;
 
 Grid.Item = styled.div`
-  grid-column: span ${props => props.span || 1};
+  grid-column: span var(--gridCols);
 
   ${props => props.styles && css`
     ${props.styles}

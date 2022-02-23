@@ -43,14 +43,13 @@ const Intro = ({ heading }) => (
       }
 
       <SiteGrid.RightCol>
-        <p>Hey there, my name is Jacob. For the past five years,
+        <p>Hey there, my name is Jacob. For the past six years,
           I have helped build semantic WordPress and React websites as a
           front-end developer at <InlineLink href="https://elegantseagulls.com/">
           Elegant Seagulls</InlineLink> in Marquette, Michigan. I am an advocate
           for accessibility and
           strive to develop inclusive web experiences.</p>
-        <p>In my free time, I study Japanese and Japanese culture.
-          I am currently learning the j&#x14D;y&#x14D; kanji.</p>
+        <p>In my free time, I run trails and study Japanese.</p>
       </SiteGrid.RightCol>
 
     </SiteGrid>

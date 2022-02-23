@@ -23,9 +23,9 @@ const HeroBlock = styled.div`
   `)}
 `;
 
-const Image = styled(Grid.Item)`
+const ImageWrap = styled(Grid.Item)`
   position: relative;
-  background-color: ${props => props.theme.red};
+  background-color: var(--red);
   grid-column: 4 / span 4;
 
   &::before {
@@ -35,7 +35,7 @@ const Image = styled(Grid.Item)`
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: ${props => props.theme.gray};
+    background-color: var(--gray);
     content: "";
   }
 
@@ -81,7 +81,7 @@ const Hero = ({ image, imageAlt, heading }) => (
   <HeroBlock>
     <Container>
       <Grid>
-        <Image>
+        <ImageWrap>
 
           {image &&
             <Figure>
@@ -95,7 +95,7 @@ const Hero = ({ image, imageAlt, heading }) => (
             </Heading>
           }
 
-        </Image>
+        </ImageWrap>
       </Grid>
     </Container>
   </HeroBlock>
