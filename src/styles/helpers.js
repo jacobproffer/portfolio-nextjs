@@ -11,7 +11,7 @@ export const bp = {
   mobileRealSm: '375px',
 };
 
-export const hover = val => `
+export const hover = (val) => `
   @media(hover: hover) {
     &:hover {
       ${val}

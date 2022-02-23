@@ -3,7 +3,6 @@ import Wrap from '../components/Wrap';
 import Header from '../components/Header';
 import Hero from '../components/home/Hero';
 import Intro from '../components/home/Intro';
-import Education from '../components/home/Education';
 import Sites from '../components/home/Sites';
 import Footer from '../components/Footer';
 import VisuallyHidden from '../components/VisuallyHidden';
@@ -22,7 +21,6 @@ const Index = () => (
             aria-hidden="true"
           />
           <Intro heading="Introduction" />
-          <Education heading="Education" />
           <Sites heading="Projects" />
         </article>
       </main>

@@ -15,14 +15,14 @@ const Link = styled(InlineLink)`
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: ${props => props.theme.gray};
+    background-color: var(--gray);
     transition: background-color .5s ease-in-out;
     content: "";
   }
 
   &:hover {
     &::before {
-      background-color: ${props => props.theme.green};
+      background-color: var(--green);
     }
   }
 

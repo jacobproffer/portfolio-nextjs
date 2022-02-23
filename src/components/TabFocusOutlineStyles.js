@@ -6,7 +6,7 @@ const TabStyles = createGlobalStyle`
   a,
   button {
     &:focus {
-      outline: ${props => props.theme.focusOutline};
+      outline: var(--focusOutline);
       outline-offset: 2px;
     }
   }

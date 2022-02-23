@@ -7,8 +7,8 @@ import InlineLink from './InlineLink';
 const StyledButton = styled(InlineLink)`
   display: inline-block;
   padding: 0 30px;
-  background-color: ${props => props.theme.black};
-  color: ${props => props.theme.white};
+  background-color: var(--black);
+  color: var(--white);
   font-size: 1rem;
   line-height: 2.5rem;
   text-decoration: none;

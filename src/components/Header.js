@@ -6,11 +6,6 @@ import Container from './Container';
 import Grid from './Grid';
 import Link from './Link';
 
-const gridItemStyles = `
-  grid-column: span 2 / -1;
-  justify-self: end;
-`;
-
 const SiteHeader = styled(Container)`
   position: absolute;
   top: 0;
@@ -42,7 +37,13 @@ const SkipLink = styled.a`
   }
 `;
 
-const LogoWrap = styled(Grid.Item)`
+const StyledGrid = styled(Grid)`
+  grid-template-columns: 40px max-content;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const LogoWrap = styled.div`
   width: 40px;
   height: 40px;
 
@@ -60,7 +61,7 @@ const LogoWrap = styled(Grid.Item)`
 const Header = () => (
   <SiteHeader as="header">
     <SkipLink href="#main-content">Skip to Main Content</SkipLink>
-    <Grid>
+    <StyledGrid>
       <LogoWrap aria-hidden="true">
         <svg
           viewBox="0 0 800 800"
@@ -75,10 +76,10 @@ const Header = () => (
           </g>
         </svg>
       </LogoWrap>
-      <Grid.Item styles={gridItemStyles}>
-        <Link href="mailto:jacobhardingproffer@gmail.com">Contact</Link>
-      </Grid.Item>
-    </Grid>
+      <div>
+        <Link href="mailto:jacob@proffer.dev">Contact</Link>
+      </div>
+    </StyledGrid>
   </SiteHeader>
 );
 

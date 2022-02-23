@@ -84,19 +84,19 @@ const Site = styled(InlineLink)`
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: ${props => props.theme.gray};
+    background-color: var(--gray);
     transition: bottom 300ms ease-in-out;
     content: "";
   }
 
-  ${props => hover(`
+  ${hover(`
     small {
-      color: ${props.theme.green};
+      color: var(--green);
     }
 
     &::before {
       bottom: 6px;
-      background-color: ${props.theme.green};
+      background-color: var(--green);
     }
   `)}
 `;
@@ -113,7 +113,7 @@ const SiteInfo = styled.div`
 `;
 
 const SiteTag = styled.small`
-  color: ${props => props.theme.red};
+  color: var(--red);
   font-size: ${rem(14)};
   font-weight: 200;
   transition: color 300ms ease-in-out;
