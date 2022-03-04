@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/html-has-lang */
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDoc extends Document {
   static async getInitialProps(ctx) {
@@ -34,7 +34,14 @@ export default class MyDoc extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=optional"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

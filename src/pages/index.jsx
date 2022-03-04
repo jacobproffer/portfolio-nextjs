@@ -1,11 +1,9 @@
-import React, { Fragment } from 'react';
-import Wrap from '../components/Wrap';
-import Header from '../components/Header';
-import Hero from '../components/home/Hero';
-import Intro from '../components/home/Intro';
-import Sites from '../components/home/Sites';
-import Footer from '../components/Footer';
-import VisuallyHidden from '../components/VisuallyHidden';
+import React, { Fragment } from "react";
+import Wrap from "../components/Wrap";
+import Header from "../components/Header";
+import Hero from "../components/home/Hero";
+import Sites from "../components/home/Sites";
+import Footer from "../components/Footer";
 
 const Index = () => (
   <Fragment>
@@ -13,14 +11,7 @@ const Index = () => (
       <Header />
       <main id="main-content">
         <article>
-          <VisuallyHidden as="h1">Portfolio of Jacob Proffer</VisuallyHidden>
-          <Hero
-            heading="プログラマー"
-            image="/images/jacob-proffer.jpg"
-            imageAlt=""
-            aria-hidden="true"
-          />
-          <Intro heading="Introduction" />
+          <Hero />
           <Sites heading="Projects" />
         </article>
       </main>

@@ -1,110 +1,32 @@
-import React from 'react';
-import styled from 'styled-components';
-import screen from 'superior-mq';
-import PropTypes from 'prop-types';
-import { bp } from '../../styles/helpers';
-import Container from '../Container';
-import Grid from '../Grid';
-import { H1 } from '../H';
+import React from "react";
+import styled from "styled-components";
+import Container from "../Container";
+import { H1 } from "../H";
 
 const HeroBlock = styled.div`
-  padding: 100px 0 182px;
-
-  ${screen.below(bp.laptopSm, `
-    padding: 75px 0 136px;
-  `)}
-
-  ${screen.below(bp.tablet, `
-    padding: 50px 0 91px;
-  `)}
-
-  ${screen.below(bp.mobile, `
-    padding: 50px 0 40px;
-  `)}
+  --hero-top-padding: clamp(6.25rem, calc(3.75rem + 12.5vw), 18.75rem);
+  --hero-bottom-padding: clamp(
+    1.5625rem,
+    calc(1.5625rem + ((1vw - 0.2rem) * 10.9375)),
+    12.5rem
+  );
+  padding: var(--hero-top-padding) 0 var(--hero-bottom-padding);
 `;
 
-const ImageWrap = styled(Grid.Item)`
-  position: relative;
-  background-color: var(--red);
-  grid-column: 4 / span 4;
-
-  &::before {
-    position: absolute;
-    bottom: -6px;
-    left: -6px;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-color: var(--gray);
-    content: "";
-  }
-
-  ${screen.below(bp.tablet, `
-    grid-column: 1 / -1;
-    max-width: 476px;
-    margin: auto;
-  `)}
-`;
-
-const Figure = styled.div`
-  position: relative;
-
-  img {
+const HeroHeadline = styled(H1)`
+  span {
     display: block;
-    mix-blend-mode: multiply;
   }
 `;
 
-const Heading = styled(H1)`
-  position: absolute;
-  top: 50%;
-  right: -75px;
-  font-weight: 700;
-  transform: translateY(-50%);
-  writing-mode: vertical-lr;
-  white-space: nowrap;
-
-  ${screen.below(bp.laptopSm, `
-    right: -57px;
-  `)}
-
-  ${screen.below(bp.tablet, `
-    top: -50px;
-    right: unset;
-    left: 50%;
-    transform: translateX(-50%);
-    writing-mode: horizontal-tb;
-  `)}
-`;
-
-const Hero = ({ image, imageAlt, heading }) => (
+const Hero = () => (
   <HeroBlock>
     <Container>
-      <Grid>
-        <ImageWrap>
-
-          {image &&
-            <Figure>
-              <img src={image} alt={imageAlt} />
-            </Figure>
-          }
-
-          {heading &&
-            <Heading lang="ja" as="span" aria-hidden="true">
-              {heading}
-            </Heading>
-          }
-
-        </ImageWrap>
-      </Grid>
+      <HeroHeadline>
+        Senior Front-End Developer at Elegant Seagulls.
+      </HeroHeadline>
     </Container>
   </HeroBlock>
 );
-
-Hero.propTypes = {
-  heading: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  imageAlt: PropTypes.string,
-};
 
 export default Hero;
