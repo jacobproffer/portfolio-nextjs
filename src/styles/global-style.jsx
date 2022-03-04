@@ -1,13 +1,13 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --container: 1220px;
+    --container: 1440px;
     --white: #fff;
     --black: #000c0b;
     --darkBlack: #0f1111;
-    --gray: rgba(255, 255, 255, 0.265);
-    --darkGray: #3e3e3e;
+    --gray: #f6f6f6;
+    --dark-gray: #737373;
     --lightGray: #f4f4f4;
     --green: #00b378;
     --red: #ff572b;
@@ -28,9 +28,8 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     &:focus {
-      border-color: var(--red);
-      outline: none;
-      box-shadow: inset 0 1px 2px var(--red), 0 0 0 .2em var(--red);
+      outline: 2px solid var(--dark-gray);
+      outline-offset: 2px;
     }
   }
 
@@ -41,11 +40,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     position: relative;
     margin: 0;
-    color: var(--white);
-    background-color: var(--black);
-    font-family: "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 100;
     line-height: 1.5;
     border: 0;
   }
@@ -55,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: var(--white);
+    color: inherit;
     text-decoration: none;
   }
 
